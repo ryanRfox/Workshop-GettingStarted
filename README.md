@@ -155,7 +155,7 @@ wallet = Wallet("unencrypted-default-wallet", "", kmd_client)
 #### Create algod client
 ```
 # define sandbox values for algod client
-algod_address = "http://localhost:4002"
+algod_address = "http://localhost:4001"
 algod_token = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
 algod_client = algod.AlgodClient(algod_token, algod_address)
 ```
