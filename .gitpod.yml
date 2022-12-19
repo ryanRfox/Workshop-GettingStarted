@@ -1,0 +1,11 @@
+tasks:
+  - name: Install Python
+    init: pyenv install 3.10.7
+    command: python --version
+  - name: Install Sandbox
+    init: git clone https://github.com/algorand/sandbox
+    command: cd sandbox && sandbox up dev -v
+ports:
+  - port: 4001
+  - port: 4002
+  - port: 8980
