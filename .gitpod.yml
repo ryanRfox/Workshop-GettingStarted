@@ -5,6 +5,7 @@ tasks:
   - name: Install Sandbox
     init: git clone https://github.com/algorand/sandbox
   - name: Start Sandbox
+    before: cd /workspace/Workshop-GettingStarted/sandbox 
     command: ./sandbox up dev -v
 ports:
   - port: 4001
