@@ -1,29 +1,6 @@
 tasks:
   - name: Install Python
-    init: pyenv install 3.10.7
-    command: pyenv global 3.10.7
-  - name: Install Sandbox
-    init: git clone https://github.com/algorand/sandbox
-  - name: Start Sandbox
-    before: cd /workspace/Workshop-GettingStarted/sandbox 
-    command: ./sandbox up dev -v
-ports:
-  - port: 4001
-  - port: 4002
-  - port: 8980
-github:
-  prebuilds:
-    # enable for the default branch (defaults to true)
-    master: true
-    # enable for all branches in this repo (defaults to false)
-    branches: false
-    # enable for pull requests coming from this repo (defaults to true)
-    pullRequests: false
-    # enable for pull requests coming from forks (defaults to false)
-    pullRequestsFromForks: false
-    # add a check to pull requests (defaults to true)
-    addCheck: false
-    # add a "Review in Gitpod" button as a comment to pull requests (defaults to false)
-    addComment: false
-    # add a "Review in Gitpod" button to the pull request's description (defaults to false)
-    addBadge: false
+    init: pyenv install 3.10.7 && pyenv global 3.10.7
+vscode:
+  extensions:
+    - ms-python.python
